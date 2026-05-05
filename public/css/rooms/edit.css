@@ -1,0 +1,248 @@
+/* ===== Edit Room Page ===== */
+
+.edit-room-wrapper {
+    max-width: 700px;
+}
+
+.edit-room-wrapper .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.edit-room-wrapper .page-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Room Edit Form */
+.room-edit-form {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    padding: var(--space-xl);
+}
+
+.room-edit-form .form-section {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.room-edit-form .form-section:last-of-type {
+    margin-bottom: var(--space-lg);
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.room-edit-form .section-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.room-edit-form .section-title i {
+    color: var(--color-warning);
+    font-size: 0.9rem;
+}
+
+.room-edit-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.room-edit-form .form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.room-edit-form .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.room-edit-form .form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.room-edit-form .form-label .required-star {
+    color: var(--color-danger);
+}
+
+.room-edit-form .form-input,
+.room-edit-form .form-select {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.925rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--bg-white);
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.room-edit-form .form-input:focus,
+.room-edit-form .form-select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.room-edit-form .form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 2.5rem;
+}
+
+.room-edit-form .form-hint {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.room-edit-form .form-error {
+    font-size: 0.8rem;
+    color: var(--color-danger);
+    margin-top: 4px;
+}
+
+/* Price Input with $ */
+.price-input-wrapper {
+    position: relative;
+}
+
+.price-input-wrapper .dollar-sign {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    pointer-events: none;
+}
+
+.price-input-wrapper .form-input {
+    padding-left: 2rem;
+}
+
+/* Current Room Info */
+.room-edit-form .current-info {
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    border-radius: var(--border-radius);
+    padding: var(--space-md) var(--space-lg);
+    margin-bottom: var(--space-lg);
+    font-size: 0.85rem;
+    color: #3730a3;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.room-edit-form .current-info i {
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+/* Amenities Grid */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--space-sm);
+}
+
+.amenity-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: 0.875rem;
+    user-select: none;
+    background: var(--bg-white);
+}
+
+.amenity-checkbox-item:hover {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+.amenity-checkbox-item:has(input:checked) {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.amenity-checkbox-item input[type="checkbox"] {
+    accent-color: var(--color-primary);
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.amenity-checkbox-item .amenity-icon {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.amenity-checkbox-item:has(input:checked) .amenity-icon {
+    color: var(--color-primary);
+}
+
+.no-amenities-message {
+    padding: var(--space-lg);
+    text-align: center;
+    color: var(--text-muted);
+    background: #f8fafc;
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--border-color);
+    font-size: 0.9rem;
+}
+
+.no-amenities-message i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+}
+
+/* Form Actions */
+.room-edit-form .form-actions {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: flex-end;
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-color);
+    margin-top: var(--space-lg);
+}
+
+@media (max-width: 600px) {
+    .room-edit-form .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

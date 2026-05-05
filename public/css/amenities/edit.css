@@ -1,0 +1,62 @@
+/* ===== Edit Amenity Page ===== */
+
+.edit-amenity-wrapper {
+    max-width: 600px;
+}
+
+.edit-amenity-wrapper .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+.edit-amenity-wrapper .page-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.edit-amenity-form {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    padding: var(--space-xl);
+}
+
+.edit-amenity-form .form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.edit-amenity-form .form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.edit-amenity-form .form-input {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.925rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--bg-white);
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.edit-amenity-form .form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.edit-amenity-form .form-actions {
+    display: flex;
+    gap: var(--space-sm);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-color);
+}

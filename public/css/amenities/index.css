@@ -1,0 +1,159 @@
+/* ===== Amenities List Page ===== */
+
+.amenities-page .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.amenities-page .page-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Table container */
+.amenities-table {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.amenities-table .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.amenities-table .table-header h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.amenities-table .table-header .count-badge {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.amenities-table .table-wrapper {
+    overflow-x: auto;
+}
+
+.amenities-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.amenities-table table th {
+    background: #f8fafc;
+    padding: var(--space-sm) var(--space-lg);
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.amenities-table table td {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.925rem;
+    color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.amenities-table table tbody tr {
+    transition: background var(--transition-fast);
+}
+
+.amenities-table table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.amenities-table table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Actions column */
+.amenities-table .actions-cell {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+}
+
+.amenities-table .btn-edit {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    transition: all var(--transition-fast);
+}
+
+.amenities-table .btn-edit:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+.amenities-table .btn-delete {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    background: var(--color-danger-bg);
+    color: var(--color-danger);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: none;
+}
+
+.amenities-table .btn-delete:hover {
+    background: var(--color-danger);
+    color: white;
+}
+
+/* Empty state */
+.amenities-empty {
+    text-align: center;
+    padding: var(--space-2xl) var(--space-xl);
+    color: var(--text-muted);
+}
+
+.amenities-empty i {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--space-md);
+    color: #cbd5e1;
+}
+
+.amenities-empty p {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-lg);
+}
+
+/* Delete form inline */
+.delete-form {
+    display: inline;
+}

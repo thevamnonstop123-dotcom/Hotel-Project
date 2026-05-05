@@ -1,0 +1,72 @@
+/* ===== Create Amenity Page ===== */
+
+.create-amenity-wrapper {
+    max-width: 600px;
+}
+
+.create-amenity-wrapper .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+.create-amenity-wrapper .page-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.create-amenity-form {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    padding: var(--space-xl);
+}
+
+.create-amenity-form .form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.create-amenity-form .form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.create-amenity-form .form-input {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.925rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--bg-white);
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.create-amenity-form .form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.create-amenity-form .form-input::placeholder {
+    color: var(--text-muted);
+}
+
+.create-amenity-form .form-actions {
+    display: flex;
+    gap: var(--space-sm);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.create-amenity-form .form-hint {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
