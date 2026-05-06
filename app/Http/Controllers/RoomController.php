@@ -70,6 +70,7 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
+        $room->load(['amenities']);  
         $amenities = Amenity::all();
         return view('rooms.edit', compact('room', 'amenities'));
     }

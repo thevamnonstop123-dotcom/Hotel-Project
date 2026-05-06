@@ -39,6 +39,22 @@ class BookingController extends Controller
             'check_out' => 'required|date|after:check_in',
         ]);
 
+        // 2. check overlap and get latest checkout
+        $latestCheckout = Booking::where('room_id', $request->room_id)
+            ->where('status', '!=', 'cancelled')
+            ->where(function ($query) use ($request) {
+                $query->where('check_in', '<', $request->check_out)
+                    ->where('check_out', '>', $request->check_in);
+            })
+            ->max('check_out');
+
+        // 3. if conflict → block + suggest date
+        if ($latestCheckout) {
+            return back()->withErrors([
+                'room_id' => "Room is not available. Try after $latestCheckout"
+            ])->withInput();
+        }
+
         //Load Room (Business data)
         $room = Room::findOrFail($request->room_id);
 
@@ -56,7 +72,7 @@ class BookingController extends Controller
             'check_in' => $request->check_in,
             'check_out' => $request->check_out,
             'total_price' => $totalPrice,
-            'status' => 'pending',
+            'status' => 'confirmed',
         ]);
 
         return redirect()->route('bookings.index')->with('success', 'Booking created successfully');
